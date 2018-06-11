@@ -7,7 +7,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             var orderService = new OrderService();
-            var result = orderService.CalculatePrice();
+            var result = orderService.CalculatePrice(() => { Console.WriteLine("Happy New Year!!"); });
             
             Console.WriteLine($"Discount Price:{result}");
         }
